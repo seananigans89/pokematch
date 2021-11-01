@@ -31,8 +31,8 @@ I am using the Pokemon API as the game will be pokemon themed. The api will pull
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [https://cloudinary.com/console/c-8e34f5c841b81f23eee979eddd4cd9/media_library/folders/home/asset/37a3835559f30c1564034bee016634bd/manage]()
-- [add link to your react architecture]()
+- [https://res.cloudinary.com/deobofqnx/image/upload/v1635796139/PokeMatch.001_lqyo2d.png]()
+- [https://res.cloudinary.com/deobofqnx/image/upload/v1635800304/PokeMatch_React_Architecture.001_tmhfug.png]()
 
 
 ### MVP/PostMVP - 5min
