@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Links
 
-## Available Scripts
+- [https://github.com/seananigans89/sean-story-porfolio-project-2-seir927]()
+- [add your deployment link]()
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+This will be a simple "Match 2" style  memory game where the user clicks two cards from a grid of 16. If the cards have matching images when flipped they wills stay flipped. Once all cards have been matched the user wins and can reset the game. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I am using the Pokemon API as the game will be pokemon themed. The api will pull 8 random pokemon from the original 151, which will then be duplicated to make a grid of 16. Two API calls will be necessary, one to return 8 Pokemon names+urls, and the second to return the sprites of those individual Pokemon.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+{"sprites": {
+"back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+"back_female": null,
+"back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
+"back_shiny_female": null,
+"front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+"front_female": null,
+"front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
+"front_shiny_female": null,} }
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Wireframes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [https://cloudinary.com/console/c-8e34f5c841b81f23eee979eddd4cd9/media_library/folders/home/asset/37a3835559f30c1564034bee016634bd/manage]()
+- [add link to your react architecture]()
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### MVP/PostMVP - 5min
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### MVP EXAMPLE
+- Find and use external api 
+- Render data on page 
+- Game is playable by user
+- Reset game functionality 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### PostMVP EXAMPLE
 
-## Learn More
+- Adjustable grid sizes
+- Pokemon generation selection
+- Sound: Music + SFX for events
+- Turn counter, win counter
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Components
+##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-### Code Splitting
+| Component | Description | 
+| --- | :---: |  
+| App | This will make the initial data pull and include React Router| 
+| Header | This will render the header include the nav | 
+| Footer | This will render the footer and include contact info/credits | 
+| Images | Component for formatting the playing cards
+| Fetch | Component for multiple API fetches to generate data for grid
+| Grid | Component to house the playing grid and change sizes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| API Fetches| H | 8hrs|  |  |
+| Grid| H | 4hrs|  | |
+| Images| H | 4hrs 
+| CSS/Styling | H | 8hrs
+| Total | H | 24hrs| 
 
-### Making a Progressive Web App
+## Additional Libraries
+ Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Code Snippet
 
-### Advanced Configuration
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
