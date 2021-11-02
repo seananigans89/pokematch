@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 const Deck = (props) => {
-console.log('hit deck')
+
 const [pokedex, setPokedex] = useState([])
 
 const pokemonArr = props.pokemonArr

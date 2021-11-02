@@ -4,7 +4,7 @@ import Deck from "./Deck";
 
 const FetchPokemon = () => {
 const [pokemonArr, setPokemonArr] = useState([])
-console.log('fetch hit')
+
 const getPokemon = () =>{
 let tempPokemonArr = []
     for (let i = 0; i < 8; i++) {
@@ -16,7 +16,7 @@ let tempPokemonArr = []
 
 setPokemonArr(tempPokemonArr)
     }
-
+console.log(pokemonArr)
     useEffect(() => {
         getPokemon()
     }, [])
