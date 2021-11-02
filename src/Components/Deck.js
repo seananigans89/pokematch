@@ -12,20 +12,6 @@ let pokeDeck2 = [...pokemonArr]
 let pokeDeck = pokeDeck1.concat(pokeDeck2);
 console.log(pokeDeck)
 
-
-
-
-
-
-    // const tempDeck = pokeDeck.map((pokemon, index) => {
-        // return(
-            
-        //     // <div key={index}>
-        //     //     <img src={pokemon} alt='pokemon'/>
-        //     // </div>
-        // )
-
-    // })    
         
         
         
@@ -45,9 +31,9 @@ console.log(pokeDeck)
         <div className='grid'>
             {shuffledCards.map(card => (
                 <div className='card' key={card.id}>
-                    <div>
                         <img className='front' src={card.card} alt='card'/>
-                        <img className='back' src='./Poke_ball.png' alt='pokeback'/>
+                        {/* <img className='back' src='./Poke_ball.png' alt='pokeback'/> */}
+                    <div>
 
                     </div>
                    

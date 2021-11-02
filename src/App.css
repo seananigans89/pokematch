@@ -1,32 +1,44 @@
 .App {
   text-align: center;
-  margin: 0 auto;
+
 
 }
 
+.main {
+
+overflow: hidden;
+
+}
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20%;
   gap: 20px;
+  position: absolute;
+  
 
 }
-.grid .card div {
-background: red;
-display: flex;
-
-}
+/* position: absolute;
+    top: "your percentage";
+    left:0;
+    right:0;
+    margin:0 auto;
+    border: solid; */
 
 .card {
   display: flex;
-  height: 200px;
-  /* background: red; */
+  height: 100%;
+ 
   border: 5px solid black;
+  justify-content: center;
 }
 
 .card img {
-  height: 100px;
+  height: auto;
+  max-width: 100%;
   display: flex;
+  size: relative;
+  
   
   
   
