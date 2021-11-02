@@ -4,21 +4,33 @@ import Images from "./Components/Images";
 import FetchPokemon from "./Components/FetchPokemon";
 
 function App() {
- 
+ const [isStarted, setIsStarted] = useState(false)
+const startGame = (e) => {
+e.preventDefault()
+setIsStarted(true)
 
-
-return (
-  <div className="App">
-      <h1>Pokemon Match 2</h1>
-      <button id="new-game" >New Game</button>
-      <div className="grid"></div>
+}
+if (isStarted) {
+  return (
+    <div>
       <FetchPokemon/>
-      <div>
-        <img className="front" src="" alt="pokefront" />
-        <img className="back" src="./Poke_Ball.png" alt="pokeback" />
-      </div>
     </div>
-  );
+  )
+}else {
+  return (
+    <div className="App">
+        <h1>Pokemon Match 2</h1>
+        <button id="new-game" onClick={startGame}>New Game</button>
+        <div></div>
+  
+        <div>
+          <img className="front" src="" alt="pokefront" />
+          <img className="back" src="./Poke_Ball.png" alt="pokeback" />
+        </div>
+      </div>
+    );
+
+}
 }
 
 export default App;
