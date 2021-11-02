@@ -2,35 +2,39 @@ import React, {useEffect, useState} from 'react'
 
 const Deck = (props) => {
 
-const [pokedex, setPokedex] = useState([])
+
 
 const pokemonArr = props.pokemonArr
+console.log(pokemonArr)
+let pokeDeck1 = [...pokemonArr]
+let pokeDeck2 = [...pokemonArr]
+let pokeDeck = pokeDeck1.concat(pokeDeck2);
+console.log(pokeDeck)
 
-// let pokeDeck = [...pokemonArr, ...pokemonArr]
-const doubleArr = () => {
-    const tempDeck = pokemonArr.map((pokemon, index) => {
+
+    const tempDeck = pokeDeck.map((pokemon, index) => {
         return(
             <div key={index}>
                 <img src={pokemon} alt='pokemon'/>
-                <img src={pokemon} alt='pokemon'/>
+                {/* <img src={pokemon} alt='pokemon'/> */}
 
             </div>
         )
     })
-    setPokedex(tempDeck)
 
-}
 
-useEffect(() => {
-doubleArr()
-    console.log(pokedex, 'ID')
-},[])
+
+
+
+
+    console.log(pokeDeck, 'ID')
+
 
 
 
     return (
         <div>
-            {pokedex}
+            {tempDeck}
         </div>
     )
 }

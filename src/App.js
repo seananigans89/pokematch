@@ -1,30 +1,31 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import Images from "./Components/Images";
+// import Images from "./Components/Images";
 import FetchPokemon from "./Components/FetchPokemon";
-import TempImagesArray from "./Components/TempImagesArray";
+// import TempImagesArray from "./Components/TempImagesArray";
 
 
 
 function App() {
-const [isStarted, setIsStarted] = useState(false)
-const startGame = (e) => {
-e.preventDefault()
-setIsStarted(true)
+// const [isStarted, setIsStarted] = useState(false)
+// const startGame = (e) => {
+// e.preventDefault()
+// setIsStarted(true)
 
-}
-if (isStarted) {
-  return (
-    <div>
-      <FetchPokemon/>
+// }
+// if (isStarted) {
+//   return (
+//     <div>
+//       <FetchPokemon/>
 
-    </div>
-  )
-}else {
+//     </div>
+//   )
+// }else {
+
   return (
     <div className="App">
         <h1>Pokemon Match 2</h1>
-        <button id="new-game" onClick={startGame}>New Game</button>
+        <button id="new-game">New Game</button>
         <div>
         <FetchPokemon/>
         </div>
@@ -36,7 +37,7 @@ if (isStarted) {
       </div>
     );
 
-}
+
 }
 
 export default App;
