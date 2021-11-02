@@ -1,24 +1,5 @@
 // import React, { useState } from "react";
 
-// const tempImages = [
-//   { 'src': "/src/1.png" },
-//   { 'src': "/src/2.png" },
-//   { 'src': "/src/3.png" },
-//   { 'src': "/src/4.png" },
-//   { 'src': "/src/5.png" },
-//   { 'src': "/src/6.png" },
-//   { 'src': "/src/7.png" },
-//   { 'src': "/src/8.png" },
-//   { 'src': "/src/1.png" },
-//   { 'src': "/src/2.png" },
-//   { 'src': "/src/3.png" },
-//   { 'src': "/src/4.png" },
-//   { 'src': "/src/5.png" },
-//   { 'src': "/src/6.png" },
-//   { 'src': "/src/7.png" },
-//   { 'src': "/src/8.png" }
-// ];
-
 // const TempImagesArray = () => {
 // const [cards, setCards] = useState ([])  
 

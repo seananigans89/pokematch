@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Deck from "./Deck";
 
+
 const FetchPokemon = () => {
   const [pokemonArr, setPokemonArr] = useState([]);
 
@@ -12,8 +13,11 @@ const FetchPokemon = () => {
       const json = await pokemon.json();
       tempPokemonArr.push(json.sprites.other['official-artwork'].front_default);
     }
-
+    
     setPokemonArr(tempPokemonArr);
+
+
+   
   };
   console.log(pokemonArr);
   useEffect(() => {
@@ -22,7 +26,12 @@ const FetchPokemon = () => {
 
   return (
     <div>
-      <Deck pokemonArr={pokemonArr} />
+       <h1>PokéMatch!</h1>
+        <button onClick={getPokemon}>New Game</button>
+
+          <Deck pokemonArr={pokemonArr} />
+
+        
     </div>
   );
 };
