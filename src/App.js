@@ -5,24 +5,12 @@ import FetchPokemon from "./Components/FetchPokemon";
 
 function App() {
  
-const fetchPokemon = () => {
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
-  .then(response => response.json())
-  .then(pokemon => console.log(pokemon)) 
 
-  }
-fetchPokemon()
-
-
-// useEffect(() => {
-  
-//   makeApiCall(url);
-// }, []);
 
 return (
   <div className="App">
       <h1>Pokemon Match 2</h1>
-      <button id="new-game">New Game</button>
+      <button id="new-game" >New Game</button>
       <div className="grid"></div>
       <FetchPokemon/>
       <div>
