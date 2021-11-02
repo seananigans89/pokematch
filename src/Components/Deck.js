@@ -42,11 +42,14 @@ console.log(pokeDeck)
 
 
     return (
-        <div>
+        <div className='grid'>
             {shuffledCards.map(card => (
                 <div className='card' key={card.id}>
-                    <img src={card.card} alt='card'/>
-                    <img src='./Poke_Ball.png' alt='pokeback'/>
+                    <div>
+                        <img className='front' src={card.card} alt='card'/>
+                        <img className='back' src='./Poke_ball.png' alt='pokeback'/>
+
+                    </div>
                    
                 </div>
             )

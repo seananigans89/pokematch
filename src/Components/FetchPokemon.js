@@ -28,8 +28,10 @@ const FetchPokemon = () => {
     <div>
        <h1>PokéMatch!</h1>
         <button onClick={getPokemon}>New Game</button>
+        
+        <Deck pokemonArr={pokemonArr} />
 
-          <Deck pokemonArr={pokemonArr} />
+       
 
         
     </div>

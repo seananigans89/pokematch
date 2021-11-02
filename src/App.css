@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0 auto;
 
 }
 
@@ -7,9 +8,31 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+
+}
+.grid .card div {
+background: red;
+display: flex;
+
+}
+
+.card {
+  display: flex;
+  height: 200px;
+  /* background: red; */
+  border: 5px solid black;
 }
 
 .card img {
   height: 100px;
+  display: flex;
   
+  
+  
+  
+}
+.card .back{
+  height: 80px;
+  display: flex;
 }
