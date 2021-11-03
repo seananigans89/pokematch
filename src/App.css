@@ -25,12 +25,13 @@ img{
 }
 
 .card .front{
-/* transform: rotateY(90deg); */
 
+transform: rotateY(90deg);
 }
 
+
 .flipped .front{
-  transform: rotateY(0deg);
+ transform: rotateY(0deg);
 }
 
 /* 

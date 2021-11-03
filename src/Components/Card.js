@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({card, handleChoice, flipped}) => {
 
     const handleClick = () => {
-        console.log(handleChoice)
+       handleChoice(card)
         
     }
 

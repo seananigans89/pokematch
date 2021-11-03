@@ -26,7 +26,7 @@ function App() {
 
       const shuffledCards = pokeDeck
         .sort(() => Math.random() - 0.5)
-        .map((card) => ({ card, id: Math.random() }));
+        .map((card) => ({ card, matched: false, id: Math.random() }));
 
       setCards(shuffledCards);
     }
@@ -36,12 +36,23 @@ function App() {
   }, []);
 
   const handleChoice = (card) => {
+    console.log(card)
+
     firstChoice ? setSecondChoice(card) : setFirstChoice(card);
   };
   useEffect(() => {
     if (firstChoice && secondChoice) {
       if (firstChoice.card === secondChoice.card) {
-        console.log("match");
+        console.log('match')
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.card === firstChoice.card) {
+              return {...card, matched: true}
+            }else{
+              return card
+            }
+          })
+        })
         resetChoices();
       } else {
         console.log("not a match");
@@ -49,7 +60,7 @@ function App() {
       }
     }
   }, [firstChoice, secondChoice]);
-
+console.log(cards)
   const resetChoices = () => {
     setFirstChoice(null);
     setSecondChoice(null);
