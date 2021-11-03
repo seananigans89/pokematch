@@ -2,15 +2,15 @@
 
 
 
-const Images = () => {
+// const Images = () => {
 
 
-return (
-    <div>
+// return (
+//     <div>
             
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default Images
+// export default Images
 
