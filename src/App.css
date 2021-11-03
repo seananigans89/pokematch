@@ -1,37 +1,35 @@
-
-
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: center;
 }
-.grid{
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
-
 .card {
   display: flex;
   width: 100px;
 }
 
-img{
+img {
   border: 3px solid black;
   border-radius: 5px;
   display: flex;
   width: 100%;
 }
 
-.card .front{
-
-transform: rotateY(90deg);
+.card .front {
+  display: none;
 }
 
-
-.flipped .front{
- transform: rotateY(0deg);
+.flipped .front {
+  display: flex;
+}
+.flipped .back {
+  display: none;
 }
 
 /* 
