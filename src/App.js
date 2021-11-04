@@ -79,8 +79,10 @@ function App() {
             }
             />
             ))}
-            <button className='newgame' onClick={fetchPokemon}>New Game</button>
         </div>
+            <div>
+              <button className='newgame' onClick={fetchPokemon}>New Game</button>
+            </div>
       </div>
     </div>
   );
