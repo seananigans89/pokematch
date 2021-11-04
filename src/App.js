@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./Components/Card";
+import Header from "./Components/Header";
+
 
 function App() {
   const [pokemonArr, setPokemonArr] = useState([]);
@@ -11,7 +13,7 @@ function App() {
   const fetchPokemon = async () => {
     let tempPokemonArr = [];
     for (let i = 0; i < 8; i++) {
-      let pokeIndex = Math.floor(Math.random() * 151) + 1;
+      let pokeIndex = Math.floor(Math.random() * (151 - 1 + 1)) + 1;
       const pokemon = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${pokeIndex}`
       );
@@ -19,9 +21,6 @@ function App() {
       tempPokemonArr.push(json.sprites.other["official-artwork"].front_default);
       setPokemonArr(tempPokemonArr);
 
-      // let pokeDeck1 = [...pokemonArr];
-      // let pokeDeck2 = [...pokemonArr];
-      // let pokeDeck = pokeDeck1.concat(pokeDeck2);
       let pokeDeck = [...pokemonArr, ...pokemonArr];
 
       const shuffledCards = pokeDeck
@@ -36,46 +35,51 @@ function App() {
   }, []);
 
   const handleChoice = (card) => {
-    console.log(card)
+
 
     firstChoice ? setSecondChoice(card) : setFirstChoice(card);
   };
   useEffect(() => {
     if (firstChoice && secondChoice) {
       if (firstChoice.card === secondChoice.card) {
-        console.log('match')
-        setCards(prevCards => {
-          return prevCards.map(card => {
+        console.log("match");
+        setCards((prevCards) => {
+          return prevCards.map((card) => {
             if (card.card === firstChoice.card) {
-              return {...card, matched: true}
-            }else{
-              return card
+              return { ...card, matched: true };
+            } else {
+              return card;
             }
-          })
-        })
+          });
+        });
         resetChoices();
       } else {
-        console.log("not a match");
-        resetChoices();
+
+        setTimeout(() => resetChoices(), 1000)
       }
     }
   }, [firstChoice, secondChoice]);
-console.log(cards)
+  console.log(cards);
   const resetChoices = () => {
     setFirstChoice(null);
     setSecondChoice(null);
   };
   return (
     <div className="App">
+        <Header/>
       <div className="wrapper">
-        <h1>PokéMatch!</h1>
-        <button onClick={fetchPokemon}>New Game</button>
-
         <div className="grid">
           {cards.map((card) => (
-            <Card key={card.id} card={card} handleChoice={handleChoice} 
-            flipped={card === firstChoice || card === secondChoice || card.matched}/>
-          ))}
+            <Card
+            key={card.id}
+            card={card}
+            handleChoice={handleChoice}
+            flipped={
+              card === firstChoice || card === secondChoice || card.matched
+            }
+            />
+            ))}
+            <button className='newgame' onClick={fetchPokemon}>New Game</button>
         </div>
       </div>
     </div>
