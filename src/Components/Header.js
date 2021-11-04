@@ -1,22 +1,16 @@
 import React from 'react'
+import Navbar from './Navbar';
+
 
 const Header = () => {
 
 
     return (
-    <div>
-        <nav className='nav'>
-            <div className='title'>PokéMatch!</div>
-            <div className='links'>
-                <ul>
-                    <li>Grid Size</li>
-                    <li>Generation</li>
-                    <li>Something</li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    )
+      <div>
+        <div className="title">PokéMatch!</div>
+        <Navbar/>
+      </div>
+    );
 }
 
 export default Header
