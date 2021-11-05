@@ -3,7 +3,6 @@ import {Route} from 'react-router-dom';
 import "./App.css";
 import Card from "./Components/Card";
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import Instructions from "./Components/Instructions";
 import CardGrid from "./Components/CardGrid";
 
