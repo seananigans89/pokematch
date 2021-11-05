@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import {Route} from 'react-router-dom';
 import "./App.css";
 import Card from "./Components/Card";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-
+import Instructions from "./Components/Instructions";
 
 function App() {
   // const [pokemonArr, setPokemonArr] = useState([]);
@@ -13,7 +14,7 @@ function App() {
   
   const fetchPokemon = async () => {
     let tempPokemonArr = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i <   8; i++) {
       let pokeIndex = Math.floor(Math.random() * (151 - 1 + 1)) + 1;
       const pokemon = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${pokeIndex}`
@@ -68,27 +69,36 @@ function App() {
     setSecondChoice(null);
   };
   return (
-    <div className="App">
-      <Header />
-      <div className="wrapper">
-        <div className="grid">
-          {cards.map((card) => (
-            <Card
+
+      <div className="App">
+        <Header />
+
+
+          <Route exact path="/Instructions" render={() => <Instructions />} />
+
+        
+
+        <div className="wrapper">
+          <div className="grid">
+            {cards.map((card) => (
+              <Card
               key={card.id}
               card={card}
               handleChoice={handleChoice}
               flipped={
                 card === firstChoice || card === secondChoice || card.matched
               }
-            />
-          ))}
+              />
+              ))}
+          </div>
         </div>
+        <div className="newgame">
+          <button onClick={fetchPokemon}>New Game</button>
+        </div>
+        <Footer />
       </div>
-      <div className="newgame">
-        <button onClick={fetchPokemon}>New Game</button>
-      </div>
-      <Footer />
-    </div>
+
+
   );
 }
 
