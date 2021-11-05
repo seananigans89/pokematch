@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
+ 
       <footer className="footer">
-        <button>Instructions</button>
-        <div>
+        <Link to='/Instructions' id='instructions'>Instructions</Link>
+        
           <button>Generation</button>
-        </div>
+        
       </footer>
-    </div>
+
   );
 };
 
