@@ -1,16 +1,12 @@
-import React from 'react'
-import Navbar from './Navbar';
-
+import React from "react";
 
 const Header = () => {
+  return (
+    <div className="header">
+      <h1 className="title">PokéMatch</h1>
+      <p className="tagline">Gotta Match 'em All!</p>
+    </div>
+  );
+};
 
-
-    return (
-      <div>
-        <div className="title">PokéMatch!</div>
-        <Navbar/>
-      </div>
-    );
-}
-
-export default Header
+export default Header;

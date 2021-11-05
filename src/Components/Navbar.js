@@ -11,7 +11,6 @@ const Navbar = () => {
           <ul>
             <li>Grid Size</li>
             <li>Generation</li>
-            <li>Something</li>
           </ul>
         </div>
       </nav>
