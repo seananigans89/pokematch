@@ -1,5 +1,4 @@
 import React from "react";
-
 const Card = ({ card, handleChoice, flipped }) => {
   const handleClick = () => {
     handleChoice(card);
@@ -11,7 +10,7 @@ const Card = ({ card, handleChoice, flipped }) => {
         <img className="front" src={card.card} alt="card" />
         <img
           className="back"
-          src="./Poke_ball.png"
+          src='https://i.imgur.com/akfGYEJ.png'
           onClick={handleClick}
           alt="pokeback"
         />
