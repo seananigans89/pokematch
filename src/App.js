@@ -14,12 +14,12 @@ function App() {
   const fetchPokemon = async () => {
     let tempPokemonArr = [];
     for (let i = 0; i < 8; i++) {
-      let pokeIndex = Math.floor(Math.random() * (300 - 151) + 1)
+      let pokeIndex = Math.floor(Math.random() * (151 - 1 +1)) + 1
       const pokemon = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${pokeIndex}`
       );
       const json = await pokemon.json();
-      console.log(json, "test string");
+
       tempPokemonArr.push(json.sprites.other["official-artwork"].front_default);
 
       let pokeDeck = [...tempPokemonArr, ...tempPokemonArr];
@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     if (firstChoice && secondChoice) {
       if (firstChoice.card === secondChoice.card) {
-        console.log("match");
+
         setCards((prevCards) => {
           return prevCards.map((card) => {
             if (card.card === firstChoice.card) {
@@ -57,7 +57,7 @@ function App() {
       }
     }
   }, [firstChoice, secondChoice]);
-  console.log(cards);
+
   const resetChoices = () => {
     setFirstChoice(null);
     setSecondChoice(null);
