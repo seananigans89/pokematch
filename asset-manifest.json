@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/pokemon-match-game/static/css/main.81c04510.chunk.css",
+    "main.js": "/pokemon-match-game/static/js/main.52fa8e43.chunk.js",
+    "main.js.map": "/pokemon-match-game/static/js/main.52fa8e43.chunk.js.map",
+    "runtime-main.js": "/pokemon-match-game/static/js/runtime-main.c6adc3df.js",
+    "runtime-main.js.map": "/pokemon-match-game/static/js/runtime-main.c6adc3df.js.map",
+    "static/js/2.da3d7eeb.chunk.js": "/pokemon-match-game/static/js/2.da3d7eeb.chunk.js",
+    "static/js/2.da3d7eeb.chunk.js.map": "/pokemon-match-game/static/js/2.da3d7eeb.chunk.js.map",
+    "index.html": "/pokemon-match-game/index.html",
+    "static/css/main.81c04510.chunk.css.map": "/pokemon-match-game/static/css/main.81c04510.chunk.css.map",
+    "static/js/2.da3d7eeb.chunk.js.LICENSE.txt": "/pokemon-match-game/static/js/2.da3d7eeb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c6adc3df.js",
+    "static/js/2.da3d7eeb.chunk.js",
+    "static/css/main.81c04510.chunk.css",
+    "static/js/main.52fa8e43.chunk.js"
+  ]
+}
