@@ -5,9 +5,10 @@ import Card from "./Components/Card";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Instructions from "./Components/Instructions";
+import CardGrid from "./Components/CardGrid";
 
 function App() {
-  // const [pokemonArr, setPokemonArr] = useState([]);
+
   const [cards, setCards] = useState([]);
   const [firstChoice, setFirstChoice] = useState(null);
   const [secondChoice, setSecondChoice] = useState(null);
@@ -22,7 +23,7 @@ function App() {
         const json = await pokemon.json();
         console.log(json, 'test string')
         tempPokemonArr.push(json.sprites.other["official-artwork"].front_default);
-        // setPokemonArr(tempPokemonArr);
+
         
 
         let pokeDeck = [...tempPokemonArr, ...tempPokemonArr];
@@ -79,18 +80,8 @@ function App() {
         
 
         <div className="wrapper">
-          <div className="grid">
-            {cards.map((card) => (
-              <Card
-              key={card.id}
-              card={card}
-              handleChoice={handleChoice}
-              flipped={
-                card === firstChoice || card === secondChoice || card.matched
-              }
-              />
-              ))}
-          </div>
+          <CardGrid cards={cards} Card={Card} handleChoice={handleChoice} 
+          firstChoice={firstChoice} secondChoice={secondChoice}/>
         </div>
         <div className="newgame">
           <button onClick={fetchPokemon}>New Game</button>

@@ -36,7 +36,7 @@ justify-content: center;
 .title {
   max-width: 600px;
   justify-content: center;
-  min-width: 400px;
+  /* min-width: 400px; */
   height: 100%;
   font-size: 80px;
   font-family: 'Pokemon Solid', sans-serif;
@@ -159,3 +159,10 @@ height: 100%;
 
 }
 
+@media screen and (max-width: 420px){
+
+  .title{
+    max-width: 100px;
+  }
+
+}
