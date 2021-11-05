@@ -22,8 +22,8 @@
   font-family: 'Pokemon Solid', sans-serif;
   color: #ffca39;
   -webkit-text-stroke: 2px #295793;  
-  font-size: 60px;
-display: flex;
+  font-size: 70px;
+  display: flex;
 
 }
 .message{
@@ -34,13 +34,14 @@ display: flex;
   color: black;
   text-align: center;
   max-width: 600px;
+  margin-top: -50px;
 }
 
 .landing-page{
   display: flex;
   align-items: center;
   flex-direction: column;
-  z-index: 1;
+  margin-top: 100px;
 }
 .play{
   text-decoration: none;
@@ -105,13 +106,12 @@ display: flex;
   padding: 5px;
 }
 
-.newgame {
+#newgame {
   size: 100%;
   font-size: 30px;
   display: flex;
   justify-content: center;
-  margin-top: -4%;
-  margin-bottom: 1%;
+  
 }
 button{
   text-decoration: none;
@@ -122,7 +122,7 @@ button{
   display: flex;
   border: 3px solid black;
   background-color: white;
-  /* padding: 10px; */
+  padding: 10px;
 
   
 
@@ -185,10 +185,12 @@ img {
   -webkit-text-stroke: 2px #295793;  
   font-size: 30px;
   display: flex;
+  align-items: center;
   border: 3px solid black;
   background-color: white;
   /* padding: 10px; */
 margin-right: 5px;
+margin-left: 5px;
 }
 
 
@@ -208,5 +210,8 @@ margin-right: 5px;
 }
 .newgame{
   
+}
+#instructions{
+  padding: 10px;
 }
 }

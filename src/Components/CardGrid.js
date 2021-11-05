@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 
 const CardGrid = (props) => {
 
@@ -16,6 +17,9 @@ const CardGrid = (props) => {
               }
               />
               ))}
+             
+
+              <Footer fetchPokemon={props.fetchPokemon}/>
           </div>
       
     )

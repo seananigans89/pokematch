@@ -80,13 +80,11 @@ function App() {
         
 
         <div className="wrapper">
-          <CardGrid cards={cards} Card={Card} handleChoice={handleChoice} 
-          firstChoice={firstChoice} secondChoice={secondChoice}/>
+          <Route exact path="/CardGrid" render={() => <CardGrid cards={cards} Card={Card} handleChoice={handleChoice}
+          firstChoice={firstChoice} secondChoice={secondChoice} fetchPokemon={fetchPokemon}/>}/>
         </div>
-        <div className="newgame">
-          <button onClick={fetchPokemon}>New Game</button>
-        </div>
-        <Footer />
+        
+
       </div>
 
 
