@@ -1,7 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
+
+
 const Footer = (props) => {
+  
   return (
     <footer className="footer">
       <div id="newgame">
@@ -12,7 +14,7 @@ const Footer = (props) => {
         Instructions
       </Link>
 
-      <button>Generation</button>
+      <button >Grid Size</button>
     </footer>
   );
 };

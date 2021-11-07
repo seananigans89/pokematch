@@ -1,25 +1,14 @@
-import React from "react";
-import Footer from "./Footer";
+// import React from "react";
+// import Card from "./Card";
 
-const CardGrid = (props) => {
-  return (
-    <div className="grid">
-      {props.cards.map((card) => (
-        <props.Card
-          key={card.id}
-          card={card}
-          handleChoice={props.handleChoice}
-          flipped={
-            card === props.firstChoice ||
-            card === props.secondChoice ||
-            card.matched
-          }
-        />
-      ))}
+// const CardGrid = ({props}) => {
 
-      <Footer fetchPokemon={props.fetchPokemon} />
-    </div>
-  );
-};
+ 
+//   return (
+//   <div>
 
-export default CardGrid;
+//   </div>
+//   );
+// };
+
+// export default CardGrid;
