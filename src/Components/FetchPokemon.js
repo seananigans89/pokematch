@@ -8,6 +8,7 @@ const FetchPokemon = () => {
 
   const fetchPokemon = async () => {
     let tempPokemonArr = [];
+    let shuffledCards = []
     for (let i = 0; i < 8; i++) {
       let pokeIndex = Math.floor(Math.random() * (151 - 1 + 1)) + 1;
       const pokemon = await fetch(
@@ -19,12 +20,12 @@ const FetchPokemon = () => {
 
       let pokeDeck = [...tempPokemonArr, ...tempPokemonArr];
 
-      const shuffledCards = pokeDeck
+      shuffledCards = pokeDeck
         .sort(() => Math.random() - 0.5)
         .map((card) => ({ card, matched: false, id: Math.random() }));
 
+      }
       setCards(shuffledCards);
-    }
   };
 
 
